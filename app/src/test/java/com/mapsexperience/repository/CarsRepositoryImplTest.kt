@@ -12,10 +12,13 @@ import org.junit.Test
 
 import org.junit.Assert.*
 import org.junit.Before
+import org.junit.runner.RunWith
 import org.mockito.Mock
 import org.mockito.MockitoAnnotations
+import org.robolectric.RobolectricTestRunner
 import retrofit2.Response
 
+@RunWith(RobolectricTestRunner::class)
 class CarsRepositoryImplTest {
 
     @Mock
