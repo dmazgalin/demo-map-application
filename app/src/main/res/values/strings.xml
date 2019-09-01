@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MapsExperience</string>
+    <string name="app_name">MapsDemo</string>
     <string name="title_activity_map">Map</string>
     <string name="title_activity_list">List</string>
     <string name="show_on_map">Show on Map</string>
