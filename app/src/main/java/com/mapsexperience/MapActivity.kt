@@ -75,7 +75,9 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarkerC
     override fun onMarkerClick(marker: Marker): Boolean {
         mMap.animateCamera(CameraUpdateFactory.newLatLng(marker.position))
 
-        viewModel.handleMarkerClick(marker.title, clusterManager)
+        marker.title?.let {
+            viewModel.handleMarkerClick(it, clusterManager)
+        }
 
         return true
     }
