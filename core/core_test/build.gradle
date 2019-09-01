@@ -1,0 +1,15 @@
+apply plugin: 'com.android.library'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+dependencies {
+    implementation dependency.kotlin.jdk
+
+    implementation dependency.androidX.lifecycle.viewModel
+    implementation dependency.androidX.lifecycle.viewModelKtx
+    implementation dependency.androidX.lifecycle.extensions
+}

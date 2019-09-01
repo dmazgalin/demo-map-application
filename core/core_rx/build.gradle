@@ -1,0 +1,15 @@
+apply plugin: 'com.android.library'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-kapt'
+
+dependencies {
+    implementation dependency.kotlin.jdk
+
+    implementation dependency.rx.java
+    implementation dependency.rx.android
+
+    implementation dependency.dagger.v2.core
+    kapt dependency.dagger.v2.compiler
+}

@@ -1,0 +1,91 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.mapsexperience"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+    testOptions {
+        unitTests {
+            returnDefaultValues = true
+            includeAndroidResources = true
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation project(mod.core.rx)
+    implementation project(mod.core.injection)
+    implementation project(mod.core.api)
+    implementation project(mod.core.http)
+    implementation project(mod.core.coroutine)
+
+
+    implementation dependency.kotlin.jdk
+    implementation dependency.androidX.appCompat
+    implementation dependency.androidX.ktx.core
+    implementation dependency.androidX.constraintLayout
+
+
+    api dependency.androidX.lifecycle.java8
+    api dependency.androidX.lifecycle.extensions
+    api dependency.androidX.lifecycle.viewModel
+
+    implementation dependency.google.materialDesign
+
+    implementation dependency.firebase.core
+
+    implementation dependency.gcm.map
+
+    implementation dependency.dagger.v2.core
+    kapt dependency.dagger.v2.compiler
+
+    implementation dependency.androidX.room.core
+    implementation dependency.androidX.room.ktx
+    kapt dependency.androidX.room.compiler
+
+    implementation dependency.retrofit.v2.core
+    implementation dependency.retrofit.v2.converter.gson
+
+    implementation dependency.timber
+    implementation dependency.multidex
+    // ViewModel and LiveData
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
+    implementation 'com.google.maps.android:android-maps-utils:0.5'
+
+    testImplementation project(mod.core.test)
+    testImplementation dependency.test.junit
+    testImplementation dependency.test.mockito
+    testImplementation dependency.test.mockitoKotlin
+    testImplementation dependency.test.kotlinJunit
+    testImplementation dependency.test.kotlinCoroutines
+    testImplementation dependency.test.androidX.core
+    testImplementation dependency.test.robolectric.core
+    testImplementation dependency.test.robolectric.multidex
+
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+}

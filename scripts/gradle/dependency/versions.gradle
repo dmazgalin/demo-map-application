@@ -1,0 +1,50 @@
+ext.versions = [
+        retrofit: [
+                v2: "2.6.0"
+        ],
+        okHttp  : [
+                v3: "3.12.3",
+        ],
+        androidX: [
+                appCompat       : "1.1.0-rc01",
+                annotations     : "1.0.0",
+                ktx             : "1.0.2",
+                lifecycle       : "2.0.0",
+                multidex        : "2.0.1",
+                recyclerView    : "1.0.0",
+                constraintLayout: "1.1.3",
+                roomVersion : "2.2.0-beta01"
+        ],
+        google  : [
+                materialDesign: "1.1.0-alpha08"
+        ],
+        test    : [
+                junit        : "4.12",
+                mockito      : "2.27.0",
+                mockitoKotlin: "2.1.0",
+                androidX     : [
+                        coreTesting: "2.0.0",
+                ],
+                kotlin       : [
+                        coroutines: "1.3.0-M2"
+                ],
+                robolectric  : "4.3"
+        ],
+        kotlin  : [
+                core      : "1.3.40",
+                coroutines: "1.2.2",
+        ],
+        rx      : [
+                java   : "2.2.8",
+                kotlin : "2.3.0",
+                android: "2.1.1",
+        ],
+        firebase: [
+                core: "17.0.0"
+        ],
+        gcm     : [
+                map: "17.0.0"
+        ],
+        dagger2 : "2.22.1",
+        timber  : "4.7.1",
+]

@@ -1,0 +1,18 @@
+ext.dependency["test"] = [
+        junit        : dependencies.create("junit:junit:${versions.test.junit}") {
+            exclude module: 'hamcrest-core'
+        },
+        mockito      : dependencies.create("org.mockito:mockito-core:${versions.test.mockito}") {
+            exclude module: 'hamcrest-core'
+        },
+        kotlinJunit  : "org.jetbrains.kotlin:kotlin-test-junit:${versions.kotlin.core}",
+        mockitoKotlin: "com.nhaarman.mockitokotlin2:mockito-kotlin:${versions.test.mockitoKotlin}",
+        androidX     : [
+                core: "androidx.arch.core:core-testing:${versions.test.androidX.coreTesting}"
+        ],
+        kotlinCoroutines : "org.jetbrains.kotlinx:kotlinx-coroutines-test:${versions.test.kotlin.coroutines}",
+        robolectric  : [
+                core    : "org.robolectric:robolectric:${versions.test.robolectric}",
+                multidex: "org.robolectric:shadows-multidex:${versions.test.robolectric}"
+        ]
+]

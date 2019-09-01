@@ -1,0 +1,28 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+dependencies {
+    implementation project(':core:core_injection')
+    implementation project(':core:core_api')
+
+    implementation dependency.kotlin.jdk
+    implementation dependency.androidX.appCompat
+    implementation dependency.androidX.ktx.core
+
+    api dependency.okhttp.v3.core
+    api dependency.okhttp.v3.log
+
+    api 'com.github.mrmike:ok2curl:0.2.3'
+    api 'com.facebook.stetho:stetho-okhttp3:1.5.0'
+
+    implementation dependency.dagger.v2.core
+    kapt dependency.dagger.v2.compiler
+
+    implementation dependency.androidX.annotations
+
+    testImplementation dependency.test.androidX.core
+    testImplementation dependency.test.kotlinJunit
+    testImplementation dependency.test.junit
+}

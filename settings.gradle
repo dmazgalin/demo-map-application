@@ -1,0 +1,2 @@
+include ':app', ':core:core_rx', ':core:core_injection', ':core:core_test', ':core:core_http', ':core:core_api', ':core:core_coroutine'
+rootProject.name='MapsExperience'

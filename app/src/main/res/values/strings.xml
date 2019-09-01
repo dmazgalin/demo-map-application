@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MapsExperience</string>
+    <string name="title_activity_map">Map</string>
+    <string name="title_activity_list">List</string>
+    <string name="show_on_map">Show on Map</string>
+    <string name="engine">Engine: %1$s</string>
+    <string name="car_ext">exterior: %1$s</string>
+    <string name="car_int">interior %1$s</string>
+    <string name="image_icon_description">Car image icon</string>
+</resources>

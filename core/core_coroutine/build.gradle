@@ -1,0 +1,18 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+dependencies {
+    implementation project(':core:core_injection')
+
+    implementation dependency.kotlin.jdk
+    implementation dependency.androidX.appCompat
+    implementation dependency.androidX.ktx.core
+
+    implementation dependency.dagger.v2.core
+    kapt dependency.dagger.v2.compiler
+
+    api dependency.kotlin.coroutines.core
+    api dependency.kotlin.coroutines.android
+}

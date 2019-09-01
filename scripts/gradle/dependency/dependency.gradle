@@ -1,0 +1,67 @@
+ext.dependency = [
+        androidX: [
+                ktx             : [
+                        core: "androidx.core:core-ktx:${versions.androidX.ktx}"
+                ],
+                appCompat       : "androidx.appcompat:appcompat:${versions.androidX.appCompat}",
+                annotations     : "androidx.annotation:annotation:${versions.androidX.annotations}",
+                constraintLayout: "androidx.constraintlayout:constraintlayout:${versions.androidX.constraintLayout}",
+                lifecycle       : [
+                        viewModel   : "androidx.lifecycle:lifecycle-viewmodel:${versions.androidX.lifecycle}",
+                        extensions  : "androidx.lifecycle:lifecycle-extensions:${versions.androidX.lifecycle}",
+                        viewModelKtx: "androidx.lifecycle:lifecycle-viewmodel-ktx:${versions.androidX.lifecycle}",
+                        java8     : "androidx.lifecycle:lifecycle-common-java8:${versions.androidX.lifecycle}"
+                ],
+                room : [
+                    core : "androidx.room:room-runtime:${versions.androidX.roomVersion}",
+                    compiler: "androidx.room:room-compiler:${versions.androidX.roomVersion}",
+                    ktx: "androidx.room:room-ktx:${versions.androidX.roomVersion}"
+                ]
+        ],
+        google  : [
+                materialDesign: "com.google.android.material:material:${versions.google.materialDesign}",
+        ],
+        retrofit: [
+                v2: [
+                        core     : "com.squareup.retrofit2:retrofit:${versions.retrofit.v2}",
+                        adapter  : [
+                                rx: "com.squareup.retrofit2:adapter-rxjava2:${versions.retrofit.v2}"
+                        ],
+                        converter: [
+                                gson: "com.squareup.retrofit2:converter-gson:${versions.retrofit.v2}"
+                        ],
+                ]
+        ],
+        okhttp: [
+                v3: [
+                        core: "com.squareup.okhttp3:okhttp:${versions.okHttp.v3}",
+                        log: "com.squareup.okhttp3:logging-interceptor:${versions.okHttp.v3}"
+                ]
+        ],
+        kotlin  : [
+                jdk: "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${versions.kotlin.core}",
+                coroutines: [
+                        core   : "org.jetbrains.kotlinx:kotlinx-coroutines-core:${versions.kotlin.coroutines}",
+                        android: "org.jetbrains.kotlinx:kotlinx-coroutines-android:${versions.kotlin.coroutines}",
+                ]
+        ],
+        rx      : [
+                java   : "io.reactivex.rxjava2:rxjava:${versions.rx.java}",
+                kotlin : "io.reactivex.rxjava2:rxkotlin:${versions.rx.kotlin}",
+                android: "io.reactivex.rxjava2:rxandroid:${versions.rx.android}"
+        ],
+        dagger  : [
+                v2: [
+                        core    : "com.google.dagger:dagger:${versions.dagger2}",
+                        compiler: "com.google.dagger:dagger-compiler:${versions.dagger2}",
+                ]
+        ],
+        firebase: [
+                core: "com.google.firebase:firebase-core:${versions.firebase.core}"
+        ],
+        gcm     : [
+                map: "com.google.android.gms:play-services-maps:${versions.gcm.map}"
+        ],
+        timber  : "com.jakewharton.timber:timber:${versions.timber}",
+        multidex : "androidx.multidex:multidex:${versions.androidX.multidex}"
+]
